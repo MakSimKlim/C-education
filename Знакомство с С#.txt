@@ -1,0 +1,16 @@
+https://www.onlinegdb.com/
+
+using System;
+class HelloWorld {
+  static void Main() 
+  {
+    //Console.WriteLine("Hello World");
+    Console.WriteLine("Введите Ваше имя: ");
+    string name;
+    name = Console.ReadLine();
+    if (name == "")
+        Console.WriteLine("Здравствуй Мир");
+    else 
+        Console.WriteLine("Здравствуй," + name + "!");
+  }
+ }
