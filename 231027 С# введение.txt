@@ -1,0 +1,112 @@
+using System;
+class Program
+{
+  static void Main(string[] ) 
+  {
+    // идентичные записи:
+    byte b;
+    System.Byte b1;
+
+    // пример
+    Decimal.deviden = decimal.One;
+    Console.WriteLine(deviden);
+    decimal devisor = 3;
+    deviden = deviden / 3;
+    Console.WriteLine(deviden);
+    Console.WriteLine(deviden * devisor);
+    double d =1;
+    Console.WriteLine(d);
+    System.Double dDevisor = 3;
+    d = d / dDevisor;
+    Console.WriteLine(d);
+    Console.WriteLine(d * dDevisor);
+    Console.WriteLine(Math.Round(deviden));
+    
+    // для текста
+    char c = '\t';
+    Char.IsControl(c);
+    Char.IsDigit('4');
+    Char.IsLetter('b');
+    
+    // логические типы данных
+    // в отличие от С++ в С# НЕТ
+    // только для bool неявных преобразований
+    bool b = true;
+    b = false;
+    
+    // String определены как класс
+    string str = null;// для string можно null? т.к. это встроенный класс
+    double d = null; //тут ошибка. К значимым из встроенных типов (числа, char, bool) , к ним применит Null нельзя
+    // если очень надо назначить Null
+    double? d = null; // подменяется переменной шаблонного типа, поэтому так можно записать
+    // ЗНАЧИМЫЕ ТИПЫ не могут быть Null 
+    
+    // спец оператор ?? проверяет, является ли d null и возвращает значение справа, если нет,  то назначенному значению d
+    double? d = null;// - null
+    double d = 56.3; // - не null
+    double f = d ?? 50;
+    Console.WriteLine(f);
+    
+    // перевод в другие системы
+    Console.WriteLine(0xFF); // 16 ричная система исчисления
+    
+    // Управляющие символы (Escape последовательности)
+    // \r - возврат каретки
+    // \0 - конец строки
+    // \f - 
+    // \a - раздается звук колокольчика
+
+    // перенос строки
+    Console.WriteLine(@"Hello
+    world");
+
+   // переменные
+   // перед использованием у переменной всегда должно быть значение!!!
+   // иначе программа даже не скомпилируется
+   
+   // int a; // так нельзя
+   int a = 5; // так нужно
+   a = Console.ReadLine(); // или так нужно
+   Console.Write(a);
+   
+   //инициализация имен, с именами как у типов данных
+   int @int = 1;
+   @int += 1;
+   
+   // Стиль .NET (дот нет)
+   // UPPERCASE - используется, когда имя идентификатора соответствует
+   // аббревиатуре или акрониму.
+   //
+   // camelCase - используется для именования аргументов методов (локальных переменных функций)
+   //
+   // PascalCase - в основном используется для всех основных идентификаторов
+   //
+   // _camelCase - может использоваться для приватных атрибутов (снаружи атрибут, внутри геттер и сеттер для доступа к приватным атрибутам)
+   //
+   
+   // Области видимости включается {}
+   //  {
+   //     int i;
+   //     i =0;
+   //  }
+   // то что во внешней области видимости, вложенные области видимости видят, обратно - нет
+   
+   // Реализация пользовательской консоли
+    Console.BackgroundColor = ConsoleColor.Yellow;
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.In; Console.Error; Console.Out;
+    Console.Title = "Lesson 1";
+    Console.BufferHight();
+    Console.Beep(1500,500);
+    Console.Clear();
+    Console.Write("Test");
+    Console.CursorSize();
+    Console.SetCursorPosition(5, 6);
+    Console.SetWindowPosition(10, 30);
+    Console.SetWindowSize(800, 600);
+    // и т.д. Нужно написать только Console
+    
+    //
+    
+  }
+}
