@@ -1,0 +1,104 @@
+Common Language Runtime (CLR)
+основа для приложений .NET, которые написаны на CIL (Common Intermidiate Language).
+
+.NET Framework Class Library (FCL)
+универсальный набор классов для использования в разработке программ
+BCL (Basic Class Library)
+
+CLI 
+Общая система типов (CTS)
+Виртуальная система исполнения (VES)
+Система метаданных
+Общий промежуточный язык (CIL)
+Общая спецификация языков (CLS)
+
+System
+System.CodeDom
+System.Collections
+System.ComponentModel
+System.Configuration
+System.Data
+System.Deployment
+System.Diagnostics
+System.DirectoryServices
+System.Drawing
+System.Globalization
+System.IO
+System.Management
+System.Media
+System.Messaging
+System.Net
+System.Linq
+System.Linq.Expressions
+System.Reflection
+System.Resources
+System.Runtime
+System.Security
+System.ServiceProcess
+System.Text
+System.Threading
+System.Timers
+System.Transactions
+
+mscoree.dll
+mscorlib.dll
+
+Сборка (Assembly)
+Декларация сборки (Манифест)
+
+Рефлектор
+Дотфускатор
+
+Две группы типов данных:
+значимые типы (value-types)
+объекты значимых типов располагаются в стеке.
+Определяются структурами.
+
+ссылочные типы (reference-types)
+располагаются в управляемой куче (managed heap).
+Определяются классами.
+
+using System;
+
+namespace L1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите ваше имя: ");
+            string name; 
+            name = Console.ReadLine();
+            if (name == "")
+                Console.WriteLine("Здравствуй, мир!");
+            else
+                Console.WriteLine("Здравствуй, " + name + "!");
+        }
+    }
+}
+
+Nullable-типы
+Это типы, которые могут принимать значение null,
+обозначающее пустую ссылку на объект.
+
+10l - long
+10f - float
+10d - double
+10m - decimal
+10uX - u X (unsigned X, где Х - любой суффикс выше)
+
+@"Hello\nWorld" - строка с сырым выводом, может быть несколько строк,
+все управляющие символы выводятся как есть.
+
+Стиль .NET
+UPPERCASE - используется, когда имя идентификатора соответствует
+аббревиатуре или акрониму.
+camelCase - используется для именования аргументов методов.
+PascalCase - в основном, используется для всех остальных идентификаторов.
+_camelCase - может использоваться для приватных атрибутов.
+
+
+
+
+
+
