@@ -1,15 +1,72 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+/*
+У интерфейса не может быть перегрузки операторов и не может быть полей (не свойств), свойства могут быть
+не может быть конструктора, все методы интерфейса по умолчанию - public, также не содержат реализации.
+
+Нельзя создать экземпляр интерфейса, но можно сделать ссылку.
+Интерфейс похож на абстрактный класс, где все меттоды абстрактные
+
+Модификатор доступа у реализующих классов и структур поменять нельзя!
+Методы интерфейса не могут быть virtual или stastic (потому что интерфейс - некое обязательство, 
+которое берет на себя класс).
+Интерфейс более ограничен в сравнении с абстрактным классом, который позволяет множественное наследование.
+
+Класс реализует интерфейс, когда класс наследует от интерфейса.
+
+Синтаксис интерфейса:
+
+[access modifier] interface <interface_name>
+{
+interface members
+}
+
+Традиционно название интерфейса начинается с большой буквы "I".
+
+Интерфейс описывает способ взаимодействия и он всегда предсказуемый
+Интерфейс реализация не интересует.
+Чтобы закрыть методы интерфейса, нужно изменить уровень доступа самого интерфейса
+
+ 
+ */
 
 namespace _231110_CS_интерфейсы
 {
+    public class Place{};
+    public interface IResearcher
+    {
+        void Explore(Place p);
+        void Invent();
+    }
+    class Lab { };
+
+    public interface IWorker
+    {
+        event EventHandler JobEnded;//завершение задачи
+        bool IsBusy { get; }
+        string GetJob();
+    
+    }
+
+    interface IManager
+    { 
+    List<IWorker> Team { get; set; }
+        void Manage();
+        void Budget();
+        void GetWorker();
+    }
+
+    // ссылки на интерфейс 
+
+
+    
+    class Interface { };
+
     class Program
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
