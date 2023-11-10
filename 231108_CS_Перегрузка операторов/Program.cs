@@ -311,6 +311,10 @@ namespace _231108_CS_Перегрузка_операторов
             }
         }
 
+        static void ShowSquare(Square s)
+        {
+            s.Draw();
+        }
         static void Main(string[] args)
         {
             Rectangle r = new Rectangle
@@ -328,6 +332,18 @@ namespace _231108_CS_Перегрузка_операторов
 
             Console.WriteLine(r);
             Console.WriteLine(s);
+            Rectangle squaredRect = s;
+            Square rectedSquare = (Square)r;
+            Console.WriteLine(rectedSquare);
+            Console.WriteLine(squaredRect);
+
+            Square intSquare = 8;
+            Console.WriteLine(intSquare);
+
+            int a = (int)intSquare;
+            Console.WriteLine(a);
+
+            ShowSquare(a);
 
         }
     }

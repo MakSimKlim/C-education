@@ -46,10 +46,13 @@ namespace _231108_CS_Перегрузка_операторов
     }
 
     public static implicit operator Square(int number)
-    { 
-    return new Square { Corner = new Point { X=0,Y=0},Side = number }
+    {
+        return new Square { Corner = new Point { X = 0, Y = 0 }, Side = number };
     }
 
-    public static explicit...
+    public static explicit operator int(Square s)
+    {
+        return s.Side;
+    }
 
 }
