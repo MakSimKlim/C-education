@@ -3,10 +3,108 @@ using static System.Console;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Text;
 
 
 namespace _231117_CS_коллекции
 {
+    class ExampleICollection : ICollection // нажать на лампочку -> реализовать интерфейс
+    {
+        public int Count => throw new NotImplementedException();
+
+        public object SyncRoot => throw new NotImplementedException();
+
+        public bool IsSynchronized => throw new NotImplementedException();
+
+        public void CopyTo(Array array, int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    class ExampleIDict : IDictionary // нажать на лампочку -> реализовать интерфейс
+    {
+        public object this[object key] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public ICollection Keys => throw new NotImplementedException();
+
+        public ICollection Values => throw new NotImplementedException();
+
+        public bool IsReadOnly => throw new NotImplementedException();
+
+        public bool IsFixedSize => throw new NotImplementedException();
+
+        public int Count => throw new NotImplementedException();
+
+        public object SyncRoot => throw new NotImplementedException();
+
+        public bool IsSynchronized => throw new NotImplementedException();
+
+        public void Add(object key, object value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(object key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(Array array, int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IDictionaryEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(object key)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class ExampleIDictEnum : IDictionaryEnumerator
+    {
+        public object Key => throw new NotImplementedException();
+
+        public object Value => throw new NotImplementedException();
+
+        public DictionaryEntry Entry => throw new NotImplementedException();
+
+        public object Current => throw new NotImplementedException();
+
+        public bool MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class ExampleColl
+    {
+        ICollection iC;
+    }
     class Program
     {
         static void SpecAndArrayListCollection()
@@ -152,13 +250,18 @@ namespace _231117_CS_коллекции
 
         static void InterfaceCollection()
         {
-        // =================== Интерфейсы коллекции =========================
-
+            // =================== Интерфейсы коллекции =========================
+            //class ExampleICollection : ICollection // нажать на лампочку -> реализовать интерфейс
+            /*
+             выпадет большой список который исправит ошибку реализации интерфейса стандартными методами
+             
+             */
 
         }
 
         static void Main(string[] args)
         {
+            Demo.SortedList();
            
            
         }
